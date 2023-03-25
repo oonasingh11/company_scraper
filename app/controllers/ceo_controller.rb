@@ -22,5 +22,8 @@ class CeoController < ApplicationController
       email: ceo_email,
       phone: ceo_phone
     }
+
+    @ceo = Ceo.new(name: ceo_name, email: ceo_email, phone: ceo_phone)
+    @ceo.save
   end
 end

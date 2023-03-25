@@ -1,0 +1,9 @@
+<h1>CEO Information</h1>
+
+<% if @ceo %>
+  <p><strong>Name:</strong> <%= @ceo.name %></p>
+  <p><strong>Email:</strong> <%= @ceo.email %></p>
+  <p><strong>Phone:</strong> <%= @ceo.phone %></p>
+<% else %>
+  <p>Sorry, no CEO information is available.</p>
+<% end %>
