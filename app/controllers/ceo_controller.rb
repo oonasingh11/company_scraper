@@ -1,0 +1,2 @@
+class CeoController < ApplicationController
+end
