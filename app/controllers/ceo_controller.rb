@@ -13,9 +13,9 @@ class CeoController < ApplicationController
 
     doc = Nokogiri::HTML(response.body)
 
-    ceo_name = doc.at_css('div.ceo-name').text
-    ceo_email = doc.at_css('div.ceo-email').text
-    ceo_phone = doc.at_css('div.ceo-phone').text
+    ceo_name = doc.at_css('div.ceo-name')&.text || 'Unknown'
+    ceo_email = doc.at_css('div.ceo-email')&.text || 'Unknown'
+    ceo_phone = doc.at_css('div.ceo-phone')&.text || 'Unknown'
 
     @ceo_info = {
       name: ceo_name,
